@@ -1,0 +1,19 @@
+
+// hardhat.config.cjs (top)
+require("@nomicfoundation/hardhat-toolbox");
+
+
+require("@nomiclabs/hardhat-ethers");
+require("dotenv").config();
+
+module.exports = {
+  solidity: "0.8.19",
+  networks: {
+    hardhat: { chainId: 1337 },
+    sonic: {
+      url: process.env.RPC || "https://rpc.soniclabs.com",
+      chainId: 146,
+      accounts: process.env.DEPLOYER_KEY ? [process.env.DEPLOYER_KEY] : []
+    }
+  }
+};

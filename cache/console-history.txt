@@ -1,0 +1,5 @@
+hre.ethersconst factory = await hre.ethers.getContractAt("MarketFactory", "0x09941AEe3ca705259498fb6dDBA0669B5002656a");
+hre.ethers
+console.log(await factory.getMarkets());
+const factory = await ethers.getContractAt("MarketFactory", "0x09941AEe3ca705259498fb6dDBA0669B5002656a");
+const { ethers } = hre;
